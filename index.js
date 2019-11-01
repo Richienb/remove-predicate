@@ -1,7 +1,5 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const recursiveFilter = require("recursive-filter")
 
-    return `${input} & ${postfix}`
-}
+module.exports = (obj, predicate) => recursiveFilter(obj, (...params) => !predicate(...params))

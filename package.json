@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
+    "name": "remove-predicate",
     "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "description": "Remove items from an object based on a predicate.",
+    "repository": "https://github.com/Richienb/remove-predicate.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,17 +11,19 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
     "keywords": [],
-    "dependencies": {},
+    "dependencies": {
+        "recursive-filter": "^1.0.1"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
-        "eslint": "^6.5.1",
+        "eslint": "^6.6.0",
         "eslint-config-richienb": "^0.2.0"
     },
     "eslintConfig": {

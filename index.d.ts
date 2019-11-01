@@ -1,14 +1,24 @@
+type predicateFn = (value: any, key: any) => any
+
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Remove items from an object based on a predicate.
+ * @param obj The object or array to handle.
+ * @param predicate The predicate to compare the items to.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const removePredicate = require("remove-predicate");
+ *
+ * removePredicate({
+ *     a: {
+ *         _a: "a",
+ *         b: 1,
+ *     },
+ *     _b: ["b"],
+ * }, (_value, key) => key.startsWith("_"))
+ * //=> { a: { b: 1 } }
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function removePredicate<T extends object | any[]>(obj: T, predicate?: predicateFn): T;
+declare function removePredicate<T>(obj: T, predicate?: predicateFn): T;
 
-export = theModule;
+export = removePredicate;
