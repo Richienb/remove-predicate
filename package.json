@@ -1,6 +1,6 @@
 {
     "name": "remove-predicate",
-    "version": "0.0.0",
+    "version": "1.0.0",
     "description": "Remove items from an object based on a predicate.",
     "repository": "https://github.com/Richienb/remove-predicate.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
